@@ -14,7 +14,7 @@ RUN apt update && apt install --yes --no-install-recommends \
     cm-super \
     texlive-generic-extra
 
-COPY CV /CV
+COPY Content /Content
 COPY build.sh /build.sh
 
 CMD ["/bin/bash", "build.sh"]
