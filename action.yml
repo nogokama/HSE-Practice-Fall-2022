@@ -1,0 +1,5 @@
+name: LaTeX article build
+author: makogon2907
+runs:
+  using: docker
+  image: Dockerfile

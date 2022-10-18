@@ -1,0 +1,27 @@
+name: Publish pdf
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  publish:
+    name: Publish changed article
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Checkout gh_pages
+      uses: actions/checkout@v2
+      with:
+        ref: 'gh_pages'
+        path: '_gh_pages'
+
+    - name: Build article
+      uses: ./
+
+    - name: Give permissions
+      run: chmod +x publish.sh
+      
+    - name: Publish
+      run: ./publish.sh
