@@ -1,1 +1,3 @@
-pdflatex Content/main.tex -interaction=nonstopmode
+pdflatex main.tex -interaction=nonstopmode
+biber main 
+pdflatex main.tex

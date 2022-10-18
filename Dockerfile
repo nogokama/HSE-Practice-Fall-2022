@@ -1,6 +1,6 @@
 FROM debian:10.1
 
-RUN apt update && apt install --yes --no-install-recommends \
+RUN apt update && apt install --yes  \
     git \
     build-essential \
     texlive-fonts-recommended \
@@ -11,10 +11,17 @@ RUN apt update && apt install --yes --no-install-recommends \
     texlive-latex-recommended \
     texlive-base \
     texlive-science \
-    cm-super \
-    texlive-generic-extra
+    cm-super 
 
-COPY Content /Content
-COPY build.sh /build.sh
+RUN apt install --yes \
+    texlive-generic-extra \
+    texlive-lang-cyrillic \
+    texlive-bibtex-extra \
+    biber
+
+COPY Content .
+COPY build.sh ./build.sh
+
+RUN ls
 
 CMD ["/bin/bash", "build.sh"]
