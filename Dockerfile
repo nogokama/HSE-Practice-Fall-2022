@@ -19,9 +19,11 @@ RUN apt install --yes \
     texlive-bibtex-extra \
     biber
 
-COPY Content .
-COPY build.sh ./build.sh
+COPY Content/Bibliography /Content/Bibliography
+COPY Content/Parts /Content/Parts
+COPY Content/*.tex /Content/
+COPY Content/*.sty /Content/
 
-RUN ls
+COPY build.sh /build.sh
 
-CMD ["/bin/bash", "build.sh"]
+CMD ["/bin/bash", "/build.sh"]

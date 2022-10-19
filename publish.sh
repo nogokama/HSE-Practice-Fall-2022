@@ -14,7 +14,7 @@ cd _gh_pages
 
 git config user.name "$ME"
 git config user.email "$ME@users.noreply.github.com"
-git add resume.pdf
+git add article.pdf
 git commit --allow-empty -m "$commit_message"
 
 git push origin gh_pages
