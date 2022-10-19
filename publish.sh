@@ -3,7 +3,11 @@
 ME='makogon2907'
 
 ls 
-pwd 
+pwd
+
+echo ""
+
+tree Content
 
 cp -r main.pdf _gh_pages/article.pdf
 
