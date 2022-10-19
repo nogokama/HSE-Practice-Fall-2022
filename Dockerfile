@@ -26,4 +26,4 @@ COPY Content/*.sty /Content/
 
 COPY build.sh /build.sh
 
-CMD ["/bin/bash", "/build.sh"]
+CMD ["/bin/bash", "build.sh"]
