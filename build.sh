@@ -33,7 +33,7 @@ files=(
     "Khamitov"
     "Zhukova"
     "Petrenko"
-    "Erhsov"
+    "Ershov"
     "Brusenin"
     "article"
 )
