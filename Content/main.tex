@@ -34,18 +34,18 @@
 
 \setTitle{Мобильное приложение для отслеживания привычек}
 
-% Выбрать одно из трех:
-% КТ1 -- \setStageOne
-% КТ2 -- \setStageTwo
-% Финальная версия -- \setStageFinal
-\setStageOne
-%\setStageTwo
-%\setStageFinal
 
-\setGroup{205}
+\setStageOne
+
 %сюда можно воткнуть картинку подписи
 \setStudentSgn{}
-\setStudent{А.А.Макогон}
+
+\providecommand{\student}{TestStudent}
+\providecommand{\group}{404}
+
+\setStudent{\student}
+\setGroup{\group}
+
 \setStudentDate{02.02.2021}
 \setAdvisor{Колесниченко Елена Юрьевна}
 \setAdvisorTitle{департамент больших данных и информационного поиска ФКН ВШЭ, доцент}
@@ -98,6 +98,9 @@ sorting=ntvy,
 
 
 \input{Parts/tensor_parallelism}
+
+
+\input{Parts/Large_Scale_Distributed_Deep_Networks}
 
 
 \newpage
