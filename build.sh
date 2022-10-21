@@ -6,7 +6,7 @@ function latex_build {
     biber main 
     pdflatex -interaction=nonstopmode '\newcommand{\student}{'"$1"'}\newcommand{\group}{'"$2 $3"'}\input{main}'
     pdflatex -interaction=nonstopmode '\newcommand{\student}{'"$1"'}\newcommand{\group}{'"$2 $3"'}\input{main}'
-    cp /Content/main.pdf /github/workspace/$4.pdf
+    cp main.pdf /github/workspace/$4.pdf
 }
 
 declare -a cases
