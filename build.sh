@@ -2,10 +2,10 @@ cd Content
 
 
 function latex_build {
-    pdflatex -interaction=nonstopmode '\newcommand{\student}{'"$1"'}\newcommand{\group}{'"$2 $3"'}\input{main}'
+    pdflatex -interaction=nonstopmode '\newcommand{\student}{'"$1 $2"'}\newcommand{\group}{'"$3"'}\input{main}'
     biber main 
-    pdflatex -interaction=nonstopmode '\newcommand{\student}{'"$1"'}\newcommand{\group}{'"$2 $3"'}\input{main}'
-    pdflatex -interaction=nonstopmode '\newcommand{\student}{'"$1"'}\newcommand{\group}{'"$2 $3"'}\input{main}'
+    pdflatex -interaction=nonstopmode '\newcommand{\student}{'"$1 $2"'}\newcommand{\group}{'"$3"'}\input{main}'
+    pdflatex -interaction=nonstopmode '\newcommand{\student}{'"$1 $2"'}\newcommand{\group}{'"$3"'}\input{main}'
     cp main.pdf /github/workspace/$4.pdf
 }
 
