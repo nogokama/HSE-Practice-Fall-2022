@@ -45,10 +45,10 @@
 
 \newcommand{\@tGroup}{\parbox[t]{1cm}{\hbox{\@tpageGroup\strut}\hrule}}
 
-\newcommand{\@tStudentSgn}{\@textWithScript{5.5cm}{\@tpageStudentSgn}{Подпись}}
+\newcommand{\@tStudentSgn}{\@textWithScript{4cm}{\@tpageStudentSgn}{\smallПодпись}}
 
 
-\newcommand{\@tStudent}{\@textWithScript{6cm}{\@tpageStudent}{И.О.Фамилия}}
+\newcommand{\@tStudent}{\@textWithScript{4cm}{\@tpageStudent}{\small(инициалы, фамилия)}}
 
 
 \newcommand{\@tStudentDate}{\@textWithScript{4.4cm}{\@tpageStudentDate}{Дата}}
@@ -59,7 +59,7 @@
 
 \newcommand{\@tAffiliation}{\@textWithScript{17cm}{\@tpageAdvisorAffiliation}{Место работы (Компания или подразделение НИУ ВШЭ)}}
 
-\newcommand{\@tAdvisorData}{\@textWithScript{1.5cm}{\@tpageAdvisorDate}{}}
+\newcommand{\@tAdvisorData}{\@tpageAdvisorDate{}}
 
 \newcommand{\@tGrade}{\@textWithScript{6cm}{\@tpageGrade}{Оценка (по 10-ти бальной шкале)}}
 
@@ -70,17 +70,17 @@
 
 \begin{center}
 \large
-\textbf{
-ПРАВИТЕЛЬСТВО РОССИЙСКОЙ ФЕДЕРАЦИИ \\
-ФГАОУ ВО НАЦИОНАЛЬНЫЙ ИССЛЕДОВАТЕЛЬСКИЙ УНИВЕРСИТЕТ \\ 
-<<ВЫСШАЯ ШКОЛА ЭКОНОМИКИ>>
-}
+Правительство Российской Федерации \\
+Федеральное государственное автономное \\
+образовательное учреждение высшего ображования \\
+<<Национальный исследовательский университет <<Высшая школа экономики>>
+
 \end{center}
 
 \begin{center}
 \large
 Факультет компьютерных наук \\
-Образовательная программа <<Прикладная математика и информатика>>
+Образовательная программа бакалавриата 01.03.02 <<Прикладная математика и информатика>>
 \end{center}
 
 \noindent\@tUDK
@@ -91,27 +91,30 @@
 \begin{center}
 \textbf{\large О\,Т\,Ч\,Е\,Т\\по учебной практике}
 
-\vspace{2pt}
+\vspace{4pt}
 
 \textbf{на факультете компьютерных наук НИУ ВШЭ}
+
+\vspace{-3pt}
+(название организации, предприятия)
 \end{center}
 
 \vspace{1.5cm}
 
-\vfill
-\noindent\begin{tabular}{lcc}
-{\textbf{Выполнил:}}&{}&{}\\
-{Студент группы БПМИ\@tGroup}&{\@tStudentSgn}&{\@tStudent}\\[15pt]
-{\@tStudentDate}&{}&{}
-\end{tabular}
-\vspace{2cm}
+\begin{flushright}
+    Выполнил студент группы БПМИ\@tGroup\\
+    \vspace{4pt}
+    \@tStudent \\ 
+    \vspace{6pt}
+    \@tStudentSgn
+\end{flushright}
 
 \vfill
 \noindent\begin{tabular}{lcr}
 {\textbf{Руководитель практики}}&\multicolumn{2}{r}{\@tAdvisor}\\[25pt]
 \multicolumn{3}{c}{\@tAdvisorTitle}\\[25pt]
 
-{Дата \@tAdvisorData \@tpageYear}&{}&{\@tAdvisorSgn}
+{Дата \@tAdvisorData}&{}&{\@tAdvisorSgn}
 
 
 \end{tabular}
