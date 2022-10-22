@@ -10,5 +10,6 @@
 *.blg
 *.run.xml
 *.toc
+*.lof
 .DS_Store
 .vscode
