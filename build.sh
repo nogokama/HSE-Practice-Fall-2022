@@ -2,11 +2,11 @@ cd Content
 
 
 function latex_build {
-    pdflatex -interaction=nonstopmode '\newcommand{\student}{'"$1 $2"'}\newcommand{\group}{'"$3"'}\input{main}'
+    pdflatex -interaction=nonstopmode '\newcommand{\studentCompleted}{'"$5 $6"'}\newcommand{\student}{'"$1 $2"'}\newcommand{\group}{'"$3"'}\input{main}'
     biber main 
-    pdflatex -interaction=nonstopmode '\newcommand{\student}{'"$1 $2"'}\newcommand{\group}{'"$3"'}\input{main}'
-    pdflatex -interaction=nonstopmode '\newcommand{\student}{'"$1 $2"'}\newcommand{\group}{'"$3"'}\input{main}'
-    cp main.pdf /github/workspace/$4.pdf
+    pdflatex -interaction=nonstopmode '\newcommand{\studentCompleted}{'"$5 $6"'}\newcommand{\student}{'"$1 $2"'}\newcommand{\group}{'"$3"'}\input{main}'
+    pdflatex -interaction=nonstopmode '\newcommand{\studentCompleted}{'"$5 $6"'}\newcommand{\student}{'"$1 $2"'}\newcommand{\group}{'"$3"'}\input{main}'
+    cp main.pdf $4.pdf
 }
 
 declare -a cases
@@ -37,10 +37,19 @@ files=(
     "Brusenin"
     "article"
 )
+completed=(
+    "Выполнил студент"
+    "Выполнил студент"
+    "Выполнила студентка"
+    "Выполнила студентка"
+    "Выполнил студент"
+    "Выполнил студент"
+    "Выполнил студент"
+)
 
 
 for ((i = 0; i < ${#names[@]}; i+= 1)) do
-    latex_build ${names[$i]} ${groups[$i]} ${files[$i]} 
+    latex_build ${names[$i]} ${groups[$i]} ${files[$i]} ${completed[$i]} 
 done 
 
 # ls /github/workspace

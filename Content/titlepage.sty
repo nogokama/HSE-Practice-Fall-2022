@@ -14,11 +14,10 @@
 \newcommand{\@tpageGrade}{}
 \newcommand{\@tpageAdvisorSgn}{}
 \newcommand{\@tpageYear}{}
-\newcommand{\@tcheckFemaleComplete}{}
-\newcommand{\@tcheckFemaleStudent}{}
+\newcommand{\@tcheckStudentCompleted}{}
 
-\newcommand{\setFemaleComplete}[1]{\renewcommand{\@tcheckFemaleComplete}{#1}}
-\newcommand{\setFemaleStudent}[1]{\renewcommand{\@tcheckFemaleStudent}{#1}}
+
+\newcommand{\setStudentCompleted}[1]{\renewcommand{\@tcheckStudentCompleted}{#1}}
 
 \newcommand{\setUDK}[1]{\renewcommand{\@tpageUDK}{#1}}
 \newcommand{\setTitle}[1]{\renewcommand{\@tpageTitle}{#1}}
@@ -108,7 +107,7 @@
 \vspace{1.5cm}
 
 \begin{flushright}
-    Выполнил\@tcheckFemaleComplete \, студент\@tcheckFemaleStudent\, группы БПМИ\@tpageGroup\\
+    \@tcheckStudentCompleted\, группы БПМИ\@tpageGroup\\
     \vspace{4pt}
     \@tStudent \\ 
     \vspace{6pt}
