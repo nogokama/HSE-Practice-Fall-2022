@@ -1,12 +1,14 @@
 %!TEX root = ../main
 
 \newpage
-\section{PipeDream}
+\section{Model parallel \& data parallel}
 \indent\setlength{\parindent}{1em} 
-Главными подходами для распределенного обучения нейронных сетей является data-parallel и model-parallel. Однако эти подходы не лишены недостатков. В статье "PipeDream: Fast and Efficient Pipeline Parallel DNN Training" описаны основные проблемы данных подходов и предложена система PipeDream, комбинирующая эти методы и тем самым оптимизирующая их.
+Главными подходами для распределенного обучения нейронных сетей является data-parallel и model-parallel. Однако эти подходы не лишены недостатков. В статье "PipeDream: Fast and Efficient Pipeline Parallel DNN Training"\cite{pipedream} описаны основные проблемы данных подходов и предложена система PipeDream, комбинирующая эти методы и тем самым оптимизирующая их.
 
 \subsection{Data parallelism}
 Идея Data parallelism заключается в разбиении исходных данных на части, каждая из которых будет использована на отдельной GPU. На каждой GPU находится своя полная копия Нейронной Сети, и веса, получаемые в ходе обучения, синхронизируются между GPU раз в несколько эпох.
+
+
 \begin{figure}[h]%current location
 	\centering
 	\scalebox{0.7}{\includegraphics{Parts/images/data-parallel.jpg}}

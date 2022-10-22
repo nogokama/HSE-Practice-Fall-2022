@@ -2,13 +2,15 @@
 
 \section{Large Scale Distributed Deep Networks}
 \indent\setlength{\parindent}{1em} 
-Начнем изучение темы распределённого обучения моделей со статьи “Large Scale Distributed Deep Networks” \cite{beginning} , в которой делается большой шаг в сторону распределенного обучения нейронных сетей. 
+Начнем изучение темы распределённого обучения моделей со статьи “Large Scale Distributed Deep Networks\cite{beginning}, в которой делается большой шаг в сторону распределенного обучения нейронных сетей. 
 
 \indent\setlength{\parindent}{1em} 
 Нейронная сеть состоит из нескольких слоев нейронов и синапсов, связей между нейронами. Каждый нейрон принимает на вход какие-то небольшие данные, производит над ними работу и передает полученный результат по синапсу следующему нейрону. У каждого синапса есть вес, который влияет на то, какой вклад внесет результат вычислений одного нейрона на результат вычислений следующего. 
+
+
 \begin{figure}[h]%current location
 	\centering
-	\scalebox{0.4}{\includegraphics{Parts/images/neural_network.jpg}}
+	\scalebox{0.5}{\includegraphics{Parts/images/neural_network.jpg}}
 	\caption{Визуализация нейронной сети}
 	\label{framework} %framework,fig1
 \end{figure}
@@ -25,9 +27,10 @@
 \subsection{Downpour SGD}
 \indent\setlength{\parindent}{1em} 
 Downpour SGD - асинхронная вариация градиентного спуска SGD. В основе распределенности этой модели лежит параллелизм данных. Несколько копий модели запускаются на разных репликах, каждой реплике отведен поднабор параметров, который она будет менять во время обучения. Модели обмениваются обновленными параметрами с помощью центрального сервера параметров, который хранит текущее состояние всех параметров, которые используются на разных репликах.
+
 \begin{figure}[h]%current location
 	\centering
-	\scalebox{0.4}{\includegraphics{Parts/images/Downpour_SGD.jpg}}
+	\scalebox{0.8}{\includegraphics{Parts/images/Downpour_SGD.jpg}}
 	\caption{Визуализация Downpour SGD}
 	\label{framework} %framework,fig1
 \end{figure}
@@ -51,7 +54,7 @@ Downpour SGD - асинхронная вариация градиентного 
 
 \begin{figure}[h]%current location
 	\centering
-	\scalebox{0.4}{\includegraphics{Parts/images/Sandblaster_L-BFGS.jpg}}
+	\scalebox{0.9}{\includegraphics{Parts/images/Sandblaster_L-BFGS.jpg}}
 	\caption{Визуализация Sandblaster L-BFGS}
 	\label{framework} %framework,fig1
 \end{figure}
@@ -62,7 +65,7 @@ Downpour SGD - асинхронная вариация градиентного 
 Ниже приведены графики для задачи обработки речи. Авторы сравнивают три оптимизационных модели, которые тренируются распределённо: Downpour SGD, Downpour SGD w Adagrad, Sandblaster L-BFGS с двумя моделями, которые были обучены на центральном процессоре одной реплики (черная линия) и на оптимизированном графическом процессоре (розовая пунктирная линия).
 \begin{figure}[h]%current location
 	\centering
-	\scalebox{0.4}{\includegraphics{Parts/images/time_accuracy.jpg}}
+	\scalebox{0.9}{\includegraphics{Parts/images/time_accuracy.jpg}}
 	\caption{Зависимость точности модели от времени обучения}
 	\label{framework} %framework,fig1
 \end{figure}
