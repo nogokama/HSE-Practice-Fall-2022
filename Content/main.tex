@@ -71,6 +71,7 @@ citestyle=gost-numeric,
 defernumbers=true,
 bibstyle=gost-numeric,
 sorting=ntvy,
+maxbibnames=99,
 ]{biblatex}
 
 \addbibresource{Bibliography/sources.bib}
@@ -86,19 +87,21 @@ sorting=ntvy,
 
 
 \newpage
-\section{Аннотация}
-
-Тут будет аннотация
-
 \input{Parts/intro}
 
-\input{Parts/PipeDream.tex}
+\newpage
+\input{Parts/Large_Scale_Distributed_Deep_Networks}
 
-\input{Parts/tensor_parallelism}
-
+\newpage
 \input{Parts/doc}
 
-\input{Parts/Large_Scale_Distributed_Deep_Networks}
+\newpage
+\input{Parts/PipeDream.tex}
+
+\newpage
+\input{Parts/tensor_parallelism}
+
+
 
 
 \newpage
