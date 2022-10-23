@@ -6,7 +6,7 @@
 
 [Статья](https://makogon2907.github.io/HSE-Practice-Fall-2022/article.pdf)
 
-## Отчеты
+## Отчеты (собирается автоматически)
 
  - [Отчет Артёма](https://makogon2907.github.io/HSE-Practice-Fall-2022/Makogon.pdf)
  - [Отчет Ксюши](https://makogon2907.github.io/HSE-Practice-Fall-2022/Petrenko.pdf)
