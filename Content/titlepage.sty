@@ -58,9 +58,9 @@
 
 \newcommand{\@tStudentDate}{\@textWithScript{4.4cm}{\@tpageStudentDate}{Дата}}
 
-\newcommand{\@tAdvisor}{\@textWithScript{12cm}{\@tpageAdvisor}{(ФИО руководителя практики)}}
+\newcommand{\@tAdvisor}{\@textWithScript{12cm}{\@tpageAdvisor}{\small(ФИО руководителя практики)}}
 
-\newcommand{\@tAdvisorTitle}{\@textWithScript{17cm}{\@tpageAdvisorTitle}{Подразделение ФКН, должность}}
+\newcommand{\@tAdvisorTitle}{\@textWithScript{17cm}{\@tpageAdvisorTitle}{\small Подразделение ФКН, должность}}
 
 \newcommand{\@tAffiliation}{\@textWithScript{17cm}{\@tpageAdvisorAffiliation}{Место работы (Компания или подразделение НИУ ВШЭ)}}
 
@@ -116,8 +116,9 @@
 
 \vfill
 \noindent\begin{tabular}{lcr}
-{\textbf{Руководитель практики}}&\multicolumn{2}{r}{\@tAdvisor}\\[25pt]
+\multicolumn{3}{l}{\textbf{Руководитель практики}}\\[15pt]
 \multicolumn{3}{c}{\@tAdvisorTitle}\\[25pt]
+\multicolumn{3}{c}{\@tAdvisor}\\[25pt]
 
 {Дата \@tAdvisorData}&{}&{\@tAdvisorSgn}
 
