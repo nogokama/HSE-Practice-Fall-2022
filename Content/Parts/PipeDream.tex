@@ -11,7 +11,7 @@
 
 \begin{figure}[h]%current location
 	\centering
-	\scalebox{0.7}{\includegraphics{Parts/images/data-parallel.jpg}}
+	\scalebox{0.8}{\includegraphics{Parts/images/data-parallel.jpg}}
 	\caption{Пример data-parallel на 4 GPU}
 	\label{data_parallel} %framework,fig1
 \end{figure}
@@ -30,7 +30,7 @@
 %\indent\setlength{\parindent}{1em} 
 Как видно на данном графике \ref{communication_overhead}, время, занимаемое на синхронизацию , может достигать до 90\% от всего времени обучения DNN.
 
-\newpage
+
 \subsection{Model Parallelism}
 Идея Model Parallelism заключается в разбиении самой модели на несколько частей, каждая из которых будет вычисляться на отдельной GPU. Данный подход часто используется в Машинном Обучении (ML). Однако для DNN наивный подход model-parallel имеет огромный недостаток. Разбивая Нейронную Сети на части по несколько слоев Нейронной Сети, отдельная часть должна вычисляться только после вычисления предыдущей части:
 
